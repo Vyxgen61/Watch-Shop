@@ -1,0 +1,39 @@
+.section_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    width: 20%;
+    height: 400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position: relative;
+    cursor: pointer;
+}
+.product:hover .icon{
+    display: block;
+
+}
+.product_name{
+    width: 80%;
+    text-align: center;
+}
+.product_name:hover{
+    color:red;
+}
+.product_price{
+    font-weight: 500;
+    margin-top: 10px;
+}
+.icon{
+    color: brown;
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+    font-size: 25px;
+    display: none;
+}
