@@ -26,7 +26,7 @@ window.addEventListener('scroll', toggleVisible);
 
 return (
 	<div className ="button_back">
-    <i class="fa-solid fa-circle-arrow-up"  onClick={scrollToTop}
+    <i className="fa-solid fa-circle-arrow-up"  onClick={scrollToTop}
 	style={{display: visible ? 'inline' : 'none'}}></i>
 	</div>
 );

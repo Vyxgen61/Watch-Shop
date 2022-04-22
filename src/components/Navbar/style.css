@@ -40,6 +40,7 @@
     gap: 10px;
     top: 43px;
     display: none;
+    z-index: 11111111111111111;
 }
 
 .navbar_item ::after {

@@ -17,10 +17,10 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-img, picture, video, canvas, svg {
+/* img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
-}
+} */
 input, button, textarea, select {
   font: inherit;
   outline: none;
@@ -82,4 +82,42 @@ a{
 .read_more:hover{
   color:#fff;
   background-color: red;
+}
+
+.loading{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap: 15px;
+  color :red;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10390959959;
+  font-size: 30px;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid red;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

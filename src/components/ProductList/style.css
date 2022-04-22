@@ -32,8 +32,26 @@
 .icon{
     color: brown;
     position: absolute;
-    bottom: 120px;
+    bottom: 130px;
     left: 40px;
     font-size: 25px;
     display: none;
+    animation: rotate 0.3s linear ; 
+}
+@keyframes rotate{
+    to{ transform: rotate(360deg); }
+  }
+.out_of_stock{
+    padding: 4px 10px;
+    color: #Fff;
+    background-color: rgb(218, 20, 20);
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size: 14px;
+    transform: rotate(30deg);
+    border-radius: 5px;
+}
+.product_img{
+    width: 100%;
 }

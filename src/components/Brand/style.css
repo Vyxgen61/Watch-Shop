@@ -1,0 +1,6 @@
+.img_brand{
+    transition: all .3s linear;
+}
+.img_brand:hover{
+    transform: scaleX(1.06);
+}

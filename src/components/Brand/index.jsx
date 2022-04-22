@@ -15,6 +15,7 @@ function Brand() {
         getBrandList()
     },[])
 
+
     return (
         <div className = "section_wrap">
             <div className ="section_title">
@@ -23,7 +24,7 @@ function Brand() {
             </div>
             <div className ="list_wrap">
                 {brandList.map((brand) => (
-                <img key={brand._id} src={`https://radiant-stream-23882.herokuapp.com/img/brand/${brand.logo}`} alt={brandList.logo} />
+                <img className='img_brand' key={brand._id} src={`https://radiant-stream-23882.herokuapp.com/img/brand/${brand.logo}`} alt={brandList.logo} />
                 ))}
             </div>
         </div>

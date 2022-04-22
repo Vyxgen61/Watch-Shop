@@ -21,7 +21,7 @@ const navbarItem = [
 ]
 function Navbar() {
     const [brandList ,setBrandList] = useState([])
-    
+    const isLogin = localStorage.getItem('token')
     const getBrandList = () => {
         fetch('https://radiant-stream-23882.herokuapp.com/api/v1/brand')
         .then(response => response.json())
@@ -32,24 +32,27 @@ function Navbar() {
     },[])
     
     return (
-        <div className ="navbar">
-           <ul className="navbar_list">
-            {navbarItem.map((item) => (
-               item.title !== 'Tin Tức' 
-               ?   <li className="navbar_item" key ={item.id}>
-                       <span className="navbar_name">{item.title} <i className="fa-solid fa-angle-down"></i></span>
-                       <ul className = 'sub_list'>
-                           {brandList.map((brand) => (
-                               <li className ="sub_item" key ={brand._id}>{brand.title}</li>
-                           ))}
-                       </ul>
-                  </li>
-               :   <li className="navbar_item" key ={item.id}>
-                         <span className="navbar_name">{item.title}</span>
-                   </li>
-            ))}
-           </ul>
-        </div>
+       <>
+        {isLogin && <div className ="navbar">
+        <ul className="navbar_list">
+         {navbarItem.map((item) => (
+            item.title !== 'Tin Tức' 
+            ?   <li className="navbar_item" key ={item.id}>
+                    <span className="navbar_name">{item.title} <i className="fa-solid fa-angle-down"></i></span>
+                    <ul className = 'sub_list'>
+                        {brandList.map((brand) => (
+                            <li className ="sub_item" key ={brand._id}>{brand.title}</li>
+                        ))}
+                    </ul>
+               </li>
+            :   <li className="navbar_item" key ={item.id}>
+                      <span className="navbar_name">{item.title}</span>
+                </li>
+         ))}
+        </ul>
+     </div>
+    }
+       </>
     );
 }
 

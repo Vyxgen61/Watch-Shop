@@ -1,5 +1,6 @@
 .news{
     width: 25%;
+    padding-bottom: 150px;
     display:flex;
     align-items:center;
     flex-direction:column;
